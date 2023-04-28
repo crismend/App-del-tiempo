@@ -37,7 +37,9 @@ async function getWeatherData(cityValue) {
         `${temperature}°C`;
 
         weatherDataEl.querySelector(".description").textContent = description;
+
         weatherDataEl.querySelector(".details").innerHTML = details.map((detail) => `<div>${detail}</div>`).join("");
+        
     } catch (error) {
         weatherDataEl.querySelector(".icon").innerHTML = "";
         weatherDataEl.querySelector(".temperature").textContent = "";
